@@ -1,4 +1,4 @@
-﻿# path: funciÃ³n para definir una ruta individual
+# path: funciÃ³n para definir una ruta individual
 from django.urls import path
 
 # views: importa las vistas de esta misma app
@@ -6,6 +6,9 @@ from . import views
 
 # Lista de rutas de la app core
 urlpatterns = [
+    path('registro/', views.registro, name='registro'),
+    path('login/', views.iniciar_sesion, name='login'),
+    path('logout/', views.cerrar_sesion, name='logout'),
     path('', views.inicio, name='inicio'),
     path('servicios/', views.servicios, name='servicios'),
     path('contacto/', views.contacto, name='contacto'),
